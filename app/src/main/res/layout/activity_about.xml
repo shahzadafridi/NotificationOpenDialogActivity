@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/write_pic"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/postedBy_pending"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="22dp"
+            android:layout_toRightOf="@+id/write_pic"
+            android:text="Shahzad Afridi"
+            android:textColor="#030303"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/write_occupassion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/write_pic"
+            android:layout_below="@+id/postedBy_pending"
+            android:text="Writer"
+            android:textColor="#777777"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/time_remedie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="22dp"
+            android:text="1 day ago"
+            android:textColor="#777777"
+            android:textSize="12dp"
+            android:textStyle="normal" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/title_pendingAdapter"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="65dp"
+        android:layout_marginRight="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lines="1"
+        android:text="WHY YOU SHOULD GO TO INDONESIA"
+        android:textColor="#000000"
+        android:textSize="14dp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/detial_pendingAdapter"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="65dp"
+        android:layout_marginRight="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lines="2"
+        android:lineSpacingExtra="6dp"
+        android:text="The purpose of this document is to explain every detail of the proposed system. What are the features and functions of the proposed system, interface of the system and what the system will be able to do?"
+        android:textColor="#777777"
+        android:textSize="13dp"
+        android:textStyle="normal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/approve_pendingAdapter"
+            android:layout_width="0dp"
+            android:layout_weight="1.3"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="62dp"
+            android:textAllCaps="false"
+            android:layout_centerHorizontal="true"
+            android:text="Approve"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"/>
+        <Button
+            android:id="@+id/delete_pendingAdapter"
+            android:layout_width="0dp"
+            android:layout_weight="1.2"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_height="40dp"
+            android:textAllCaps="false"
+            android:layout_centerHorizontal="true"
+            android:text="Reject"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="#fff"/>
+
+</LinearLayout>
