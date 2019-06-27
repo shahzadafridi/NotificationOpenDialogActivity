@@ -7,7 +7,8 @@ If you want similar functionality like AlertDialog then you can also achieve tha
 
 Github: https://github.com/shahzadafridi/NotificationOpenDialogActivity
 
-Demo Gif: https://i.imgur.com/cVW6IyS.gifv
+## Demo Gif
+![Click](https://i.imgur.com/cVW6IyS.gifv "Title")
 
 I have posted this answer on stackoverflow.
 https://stackoverflow.com/a/56790592/6672577
