@@ -15,6 +15,7 @@ import android.os.Bundle;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
+    private int count = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,16 +23,19 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
     public void sendNotification(View view){
-         sendMeNotification("Hell this is notification.");
+         sendMeNotification("Notification " + (++count));
     }
 
     public void sendMeNotification(String message) {
-
         NotificationManager manager = (NotificationManager)  getSystemService(NOTIFICATION_SERVICE);
-        NotificationCompat.Builder notification = null;
+        NotificationCompat.Builder notification;
         Intent main = new Intent(this, AboutActivity.class);
-        main.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        PendingIntent pendingIntent = PendingIntent.getActivity(this, 001, main, PendingIntent.FLAG_ONE_SHOT);
+        // Must be FLAG_ONE_SHOT
+        // FLAG_UPDATE_CURRENT will finish previous activities in some android phones
+        int flags = PendingIntent.FLAG_ONE_SHOT | PendingIntent.FLAG_IMMUTABLE;
+        // Must be pending intent
+        // TaskStackBuilder will finish previous activities in some android phones
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 1, main, flags);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             int importance = NotificationManager.IMPORTANCE_DEFAULT;
             NotificationChannel channel = new NotificationChannel(this.getString(R.string.channel_id), this.getString(R.string.channel_name), importance);
@@ -40,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
             channel.enableLights(true);
             channel.setLightColor(Color.RED);
             manager.createNotificationChannel(channel);
+            // Important: Must be channel.getId()
             notification = new NotificationCompat.Builder(this, channel.getId());
         } else {
             notification = new NotificationCompat.Builder(this, this.getString(R.string.channel_id));
