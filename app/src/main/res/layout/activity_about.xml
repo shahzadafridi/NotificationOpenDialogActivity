@@ -76,7 +76,6 @@
         android:layout_marginRight="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:lines="2"
         android:lineSpacingExtra="6dp"
         android:text="The purpose of this document is to explain every detail of the proposed system. What are the features and functions of the proposed system, interface of the system and what the system will be able to do?"
         android:textColor="#777777"
