@@ -18,3 +18,5 @@ else
   chmod +x /opt/tools/android_sdk.sh
   su -c /opt/tools/android_sdk.sh android
 fi
+
+chmod -R 0777 /opt/android-sdk-linux
