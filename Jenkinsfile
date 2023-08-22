@@ -3,7 +3,7 @@ pipeline {
   agent any
 
   stages {
-    stage('Local unit test') {
+    stage('Test authors') {
       agent {
         dockerfile {
           dir 'cicd/python'
